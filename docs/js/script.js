@@ -4,7 +4,8 @@ console.log("✅ script.js loaded");
    ✅ SET YOUR RENDER BACKEND URL HERE (after deploy)
    Example: https://portfolio-backend.onrender.com
    ========================================================= */
-const RENDER_BACKEND_URL = "https://kiran-portfolio-backend.onrender.com";
+const RENDER_BACKEND_URL = "https://kiran-portfolio-fullstack.onrender.com";
+
 
 function changeAboutMeText() {
   const aboutMeTexts = ["Tech Enthusiast", "Data Scientist", "Full Stack Web Developer"];
@@ -214,10 +215,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // ✅ Auto-switch API URL:
   // - local dev (localhost) -> use local backend
   // - GitHub Pages / production -> use Render backend
-  const API_BASE =
-    window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
-      ? "http://localhost:5000"
-      : RENDER_BACKEND_URL;
+ const API_BASE =
+  window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+    ? "http://localhost:5000"
+    : "";
 
   contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
