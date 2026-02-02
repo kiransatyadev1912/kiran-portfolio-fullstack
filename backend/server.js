@@ -47,7 +47,7 @@ app.post("/api/contact", async (req, res) => {
     const [result] = await db.query(sql, [name, email, message]);
 
     console.log("📩 Saved to DB:", { id: result.insertId, name, email });
-    return res.json({ ok: true, msg: "Message saved successfully ✅" });
+    return res.json({ ok: true, msg: "Message sent successfully ✅" });
   } catch (err) {
     console.error("❌ DB insert error:", err.message);
     return res.status(500).json({ ok: false, msg: "Database error" });
