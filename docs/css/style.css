@@ -606,3 +606,95 @@ iframe {
   margin-top: 10px;
   font-weight: 600;
 }
+/* =========================
+   ✅ Mobile Fix Pack (Override)
+   Paste at the END of the file
+   ========================= */
+
+/* Prevent any horizontal scroll */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Fix the about-me typing text causing overflow */
+.about-me {
+  min-width: 0 !important;     /* remove 350px restriction */
+  max-width: 100% !important;
+  display: inline-block;
+  text-align: left;
+  word-break: break-word;
+}
+
+/* Make header paragraph readable on mobile */
+header p {
+  max-width: 92% !important;
+  padding: 0 16px !important;
+}
+
+/* Sections should be full width on small screens */
+section {
+  width: 100% !important;
+  max-width: 900px;
+  padding: 20px 16px !important;
+}
+
+/* Profile image should scale on smaller screens */
+img {
+  width: min(200px, 60vw) !important;
+  height: min(200px, 60vw) !important;
+}
+
+/* Form should align perfectly */
+form {
+  width: 100% !important;
+  max-width: 520px;
+  margin: 16px auto !important;
+  padding: 16px !important;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea,
+form button {
+  width: 100% !important;     /* no more 90% */
+}
+
+/* Skills list wraps nicely */
+.skills-list {
+  flex-wrap: wrap;
+  gap: 12px !important;
+}
+
+/* Projects grid: 3 -> 2 -> 1 */
+@media (max-width: 992px) {
+  #projects {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 64px 0 !important;
+  }
+
+  h1 { font-size: 26px !important; }
+  h2 { font-size: 20px !important; }
+
+  #projects {
+    grid-template-columns: 1fr !important;
+  }
+
+  .icon-link {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  /* Modal should fit on phones */
+  .modal-content {
+    width: 92% !important;
+    max-width: 92% !important;
+    max-height: 85vh !important;
+    padding: 14px !important;
+  }
+}
