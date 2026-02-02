@@ -4,7 +4,7 @@ console.log("✅ script.js loaded");
    ✅ SET YOUR RENDER BACKEND URL HERE (after deploy)
    Example: https://portfolio-backend.onrender.com
    ========================================================= */
-const RENDER_BACKEND_URL = "https://YOUR-RENDER-SERVICE.onrender.com";
+const RENDER_BACKEND_URL = "https://kiran-portfolio-backend.onrender.com";
 
 function changeAboutMeText() {
   const aboutMeTexts = ["Tech Enthusiast", "Data Scientist", "Full Stack Web Developer"];
