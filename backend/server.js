@@ -11,12 +11,23 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
+const allowedOrigins = [
+  "https://kiransatyadev1912.github.io",
+  "https://kiran-portfolio-fullstack.onrender.com"
+];
+
 app.use(
   cors({
-    origin: process.env.FRONTEND_ORIGIN || "https://kiransatyadev1912.github.io",
+    origin: function (origin, callback) {
+      // allow requests with no origin (like Postman)
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.includes(origin)) return callback(null, true);
+      return callback(new Error("Not allowed by CORS"));
+    },
     methods: ["GET", "POST"],
   })
 );
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
