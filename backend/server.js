@@ -1,5 +1,5 @@
 // backend/server.js
-require("dotenv").config({ path: __dirname + "/.env" }); // ✅ LOAD ENV FIRST
+require("dotenv").config(); // ✅ LOAD ENV FIRST
 
 const express = require("express");
 const cors = require("cors");
@@ -11,7 +11,13 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: process.env.FRONTEND_ORIGIN || "https://kiransatyadev1912.github.io",
+    methods: ["GET", "POST"],
+  })
+);
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
