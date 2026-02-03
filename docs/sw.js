@@ -1,5 +1,4 @@
-const CACHE_NAME = "kiran-portfolio-v1";
-const CACHE_NAME = "kiran-portfolio-v2";
+const CACHE_NAME = "kiran-portfolio-v2"; // change to v3, v4 when you update files
 
 const ASSETS_TO_CACHE = [
   "./",
@@ -8,11 +7,11 @@ const ASSETS_TO_CACHE = [
   "./css/style.css",
   "./js/script.js",
   "./manifest.json",
-  "./icons/icon-192.png",
-  "./icons/icon-512.png"
+  "./icons/icon-192.jpg",
+  "./icons/icon-512.jpg",
 ];
 
-// Install: cache basic files
+// Install: cache files
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS_TO_CACHE))
@@ -20,7 +19,7 @@ self.addEventListener("install", (event) => {
   self.skipWaiting();
 });
 
-// Activate: clear old caches
+// Activate: delete old caches
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((keys) =>
@@ -30,7 +29,7 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
-// Fetch: serve cache first, fallback to network
+// Fetch: cache-first
 self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((cached) => cached || fetch(event.request))
