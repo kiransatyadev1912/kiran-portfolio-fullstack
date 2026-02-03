@@ -10,25 +10,41 @@ const db = require("./db"); // mysql2 pool
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
-const allowedOrigins = [
-  "https://kiransatyadev1912.github.io",
-  "https://kiran-portfolio-fullstack.onrender.com"
-];
-
+// ✅ CORS middleware (Local + Production)
 app.use(
   cors({
     origin: function (origin, callback) {
-      // allow requests with no origin (like Postman)
+      // Allow requests with no origin (Postman/curl)
       if (!origin) return callback(null, true);
+
+      // ✅ Allow any localhost / 127.0.0.1 port (DEV)
+      if (
+        origin.startsWith("http://localhost:") ||
+        origin.startsWith("http://127.0.0.1:")
+      ) {
+        return callback(null, true);
+      }
+
+      // ✅ Allow production origins only
+      const allowedOrigins = [
+        "https://kiransatyadev1912.github.io",
+        "https://kiran-portfolio-fullstack.onrender.com",
+      ];
+
       if (allowedOrigins.includes(origin)) return callback(null, true);
-      return callback(new Error("Not allowed by CORS"));
+
+      return callback(new Error("Not allowed by CORS: " + origin));
     },
-    methods: ["GET", "POST"],
+    methods: ["GET", "POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
+// ✅ Handle preflight requests
+app.options(/.*/, cors());
 
+
+// Body parsers
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -38,7 +54,9 @@ app.post("/api/contact", async (req, res) => {
     const { name, email, message } = req.body;
 
     if (!name || !email || !message) {
-      return res.status(400).json({ ok: false, msg: "All fields are required." });
+      return res
+        .status(400)
+        .json({ ok: false, msg: "All fields are required." });
     }
 
     const sql =
@@ -63,15 +81,15 @@ app.get("/api/profile", (req, res) => {
   });
 });
 
-// ✅ Serve frontend static files from /docs
+// ✅ Serve frontend static files from /docs (for Render)
 app.use(express.static(path.join(__dirname, "..", "docs")));
 
-// ✅ Home route (IMPORTANT: docs/index.html)
+// ✅ Home route (docs/index.html)
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "docs", "index.html"));
 });
 
-// ✅ Optional: handle 404 for API routes nicely
+// ✅ Optional: handle unknown API routes
 app.use("/api", (req, res) => {
   res.status(404).json({ ok: false, msg: "API route not found" });
 });
