@@ -1,4 +1,5 @@
 const CACHE_NAME = "kiran-portfolio-v1";
+const CACHE_NAME = "kiran-portfolio-v2";
 
 const ASSETS_TO_CACHE = [
   "./",
