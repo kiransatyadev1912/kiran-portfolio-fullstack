@@ -1,202 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <link rel="manifest" href="./manifest.json" />
-<meta name="theme-color" content="#831bcd" />
-<link rel="apple-touch-icon" href="./icons/icon-192.jpg" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="default" />
-<meta name="apple-mobile-web-app-title" content="Kiran" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="personal profile page of kiran" />
 
+  <!-- ✅ PWA -->
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="theme-color" content="#831bcd" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Kiran" />
+  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
 
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="personel profile page of kiran">
-   <title>Kiran's profile</title>
-   <link rel="icon" href="icon.ico.ico" type="image/x-icon">
-   <link rel="stylesheet" href="css/style.css">
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <title>Kiran's profile</title>
 
+  <!-- ✅ favicon (use one of these) -->
+  <link rel="icon" href="./icons/icon-192.png" />
 
-    <script src="js/script.js" defer></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
+  <script src="js/script.js" defer></script>
 </head>
+
 <body>
-   <nav class="navbar">
-      <div class="navbar-container">
-         <a href="/" class="nav-logo">
-
-            <h1>Nallamothu Kiran Satya Dev</h1>
-         </a>
-         <div class="nav-toggle">
-            <i class="fas fa-bars"></i>
-
-         </div>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="/" class="nav-logo">
+        <h1>Nallamothu Kiran Satya Dev</h1>
+      </a>
+      <div class="nav-toggle">
+        <i class="fas fa-bars"></i>
       </div>
-      <div class="nav-menu">
-         <a href="https://drive.google.com/file/d/1rLR_ReFAhCH0ZCpfP6W4RyU3_vHR6t99/view?usp=sharing" class="resume-button" download>Download Resume</a>
-      
+    </div>
+
+    <div class="nav-menu">
+      <a href="https://drive.google.com/file/d/1rLR_ReFAhCH0ZCpfP6W4RyU3_vHR6t99/view?usp=sharing"
+         class="resume-button"
+         target="_blank" rel="noreferrer">
+        Download Resume
+      </a>
+
       <div id="dark-mode-toggle" class="dark-mode-toggle">
-         <i class="fas fa-moon"></i>
+        <i class="fas fa-moon"></i>
       </div>
-      </div>
-   </nav>
-   <header>
-      <img src="images/kiran.jpg" alt="kiran image">
-      <h1>This is kiran,a <span class="about-me"></span></h1>
+    </div>
+  </nav>
 
-      <p>I am Highly motivated B.Tech student seeking a
-challenging Software Engineering Position in a dynamic
-and innovative organization, Where I Can contribute my
-Knowledge and skills to the organization and my
-enhance my experience through continuous learning
-and teamwork</p>
-   </header>
- 
-<div class="content-container">
-   <section>
+  <header>
+    <img src="images/kiran.jpg" alt="kiran image" />
+    <h1>This is kiran, a <span class="about-me"></span></h1>
+
+    <p>
+      I am a highly motivated B.Tech student seeking a challenging Software Engineering Position in a dynamic
+      and innovative organization, where I can contribute my knowledge and skills to the organization and enhance
+      my experience through continuous learning and teamwork.
+    </p>
+  </header>
+
+  <div class="content-container">
+
+    <section>
       <h4>MY Technical Skills</h4>
       <div class="skills-list">
-      <ul>
-      
-      
-       <li>Web Development</li>
-      <li>Spring Boot</li>
-      <li>My Sql</li>
-      </ul>
-   </div>
-   </section>
-   <hr>
-   <section class="horizontol-scroll">
+        <ul>
+          <li>Web Development</li>
+          <li>Spring Boot</li>
+          <li>MySQL</li>
+        </ul>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- ✅ FIXED CLASS NAME -->
+    <section class="horizontal-scroll">
       <div class="icon-container">
-         <img src="images/1.png" alt="Icon 1">
-         <img src="images/2.png" alt="Icon 2">
-         <img src="images/3.png" alt="Icon 3">
-         <img src="images/4.png" alt="Icon 4">
-         <img src="images/5.webp" alt="Icon 5">
-         <img src="images/6.webp" alt="Icon 6">
-         <img src="images/7.svg" alt="Icon 7">
-         <img src="images/8.png" alt="Icon 8">
-         <img src="images/9.png" alt="Icon 9">
-         <img src="images/10.png" alt="Icon 10">
+        <img src="images/1.png" alt="Icon 1" />
+        <img src="images/2.png" alt="Icon 2" />
+        <img src="images/3.png" alt="Icon 3" />
+        <img src="images/4.png" alt="Icon 4" />
+        <img src="images/5.webp" alt="Icon 5" />
+        <img src="images/6.webp" alt="Icon 6" />
+        <img src="images/7.svg" alt="Icon 7" />
+        <img src="images/8.png" alt="Icon 8" />
+        <img src="images/9.png" alt="Icon 9" />
+        <img src="images/10.png" alt="Icon 10" />
       </div>
-   </section>
-   <section id="programming-languages">
-      <h2>programming Languages</h2>
+    </section>
+
+    <section id="programming-languages">
+      <h2>Programming Languages</h2>
+
       <div class="skill">
-         
-         <p>Java</p>
-      
-      <div class="progress-bar animated" data-progress="70" style="--progress: 80%;"></div>
+        <p>Java</p>
+        <div class="progress-bar" data-progress="80"></div>
       </div>
+
       <div class="skill">
-         
-         <p>c++</p>
-      
-      <div class="progress-bar animated" data-progress="80" style="--progress: 0%;"></div>
+        <p>C++</p>
+        <div class="progress-bar" data-progress="60"></div>
       </div>
+
       <div class="skill">
-         
-         <p>HTML</p>
-      
-      <div class="progress-bar animated" data-progress="80" style="--progress: 80%;"></div>
-      </div> 
-      <div class="skill">
-         
-         <p>Java Script</p>
-      
-      <div class="progress-bar animated" data-progress="60" style="--progress: 60%;"></div>
+        <p>HTML</p>
+        <div class="progress-bar" data-progress="80"></div>
       </div>
-    
-         
-   </section>
-   <section>
+
+      <div class="skill">
+        <p>JavaScript</p>
+        <div class="progress-bar" data-progress="60"></div>
+      </div>
+    </section>
+
+    <section>
       <h2>MY Project</h2>
-      <p>Take a LOOK Some of my Works</p>
-      <center>
+      <p>Take a look at some of my works</p>
+
       <section id="project">
-         <div class="project-thumbnail">
-            <div class="thumbnail-content">
-               <img src="images/project.jpg" alt="project1">
-               <h2>Live Quiz management System</h2>
-               <P>Description Of Project</P>
-               <a href="./project.html" class="btn">Know More</a>
-            </div>
-         </div>
-      </center>
+        <div class="project-thumbnail">
+          <div class="thumbnail-content">
+            <img src="images/project.jpg" alt="project1" />
+            <h2>Live Quiz Management System</h2>
+            <p>Description of project</p>
+            <a href="./project.html" class="btn">Know More</a>
+          </div>
+        </div>
       </section>
-   </section>
-   <section>
+    </section>
+
+    <section>
       <h5>Contact Me</h5>
-     <form id="contactForm" action="javascript:void(0)" method="post">
 
-  <div class="form-group">
-    <label for="name">Name:</label>
-    <input
-      type="text"
-      id="name"
-      name="name"
-      placeholder="Your Name"
-      required
-    >
-  </div>
+      <form id="contactForm" action="javascript:void(0)" method="post">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required />
+        </div>
 
-  <div class="form-group">
-    <label for="email">Email:</label>
-    <input
-      type="email"
-      id="email"
-      name="email"
-      placeholder="Your Email"
-      required
-    >
-  </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required />
+        </div>
 
-  <div class="form-group">
-    <label for="message">Message</label>
-    <textarea
-      id="message"
-      name="message"
-      placeholder="Your Message"
-      required
-    ></textarea>
-  </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        </div>
 
-  <button type="submit">Send</button>
-  <p id="contactStatus"></p>
+        <button type="submit">Send</button>
+        <p id="contactStatus"></p>
+      </form>
+    </section>
 
-</form>
-
-   </section>
-   <section>
+    <section>
       <h3>Contact Information</h3>
       <p>Let's Connect</p>
+
       <a href="mailto:kiransatyadev189@gmail.com" class="icon-link email-icon">
-         <i class="fas fa-envelope"> </i>
-      </a> | 
-         <a href="https://linkedin.com/in/kiran-satya-dev-933baa213" class="icon-link linkedin-icon"><i class="fab fa-linkedin"></i></a>
-         <br>
-         <br>
-         <br>
-   </section>
-   <hr>
-   <footer>
-      <p>&copy; 2024 Kiran.All rights reserved.</p>
-   </footer>
-   
-<script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker
-        .register("./sw.js")
-        .then(() => console.log("✅ Service Worker registered"))
-        .catch((err) => console.log("❌ SW registration failed:", err));
-    });
-  }
-</script>
+        <i class="fas fa-envelope"></i>
+      </a>
 
+      <a href="https://linkedin.com/in/kiran-satya-dev-933baa213"
+         class="icon-link linkedin-icon" target="_blank" rel="noreferrer">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </section>
 
-   
+    <hr />
+
+    <footer>
+      <p>&copy; 2024 Kiran. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ✅ Service Worker Register -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker
+          .register("./sw.js")
+          .then(() => console.log("✅ Service Worker registered"))
+          .catch((err) => console.log("❌ SW registration failed:", err));
+      });
+    }
+  </script>
 </body>
 </html>

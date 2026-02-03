@@ -6,7 +6,9 @@ const ASSETS_TO_CACHE = [
   "./project.html",
   "./css/style.css",
   "./js/script.js",
-  "./manifest.json"
+  "./manifest.json",
+  "./icons/icon-192.png",
+  "./icons/icon-512.png"
 ];
 
 // Install: cache basic files

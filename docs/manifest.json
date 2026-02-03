@@ -1,12 +1,12 @@
 {
   "name": "Kiran Portfolio",
   "short_name": "Kiran",
+  "description": "Kiran's full-stack portfolio website",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#831bcd",
-  "description": "Kiran's full-stack portfolio website",
   "icons": [
     {
       "src": "./icons/icon-192.png",
