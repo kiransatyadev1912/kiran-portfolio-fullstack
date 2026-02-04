@@ -8,7 +8,7 @@ const ASSETS_TO_CACHE = [
   "./js/script.js",
   "./manifest.json",
   "./icons/icon-192.jpg",
-  "./icons/icon-512.jpg",
+  "./icons/icon-512.png",
 ];
 
 // Install: cache files
