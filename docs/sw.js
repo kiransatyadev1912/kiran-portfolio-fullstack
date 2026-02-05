@@ -1,4 +1,4 @@
-const CACHE_NAME = "kiran-portfolio-v2"; // change to v3, v4 when you update files
+const CACHE_NAME = "kiran-portfolio-v3"; // change to v3, v4 when you update files
 
 const ASSETS_TO_CACHE = [
   "./",
