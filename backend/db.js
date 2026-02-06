@@ -8,12 +8,14 @@ const pool = mysql.createPool({
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  ssl: {
-    rejectUnauthorized: false // REQUIRED for Aiven
-  },
+  ssl: { rejectUnauthorized: false },
+
   waitForConnections: true,
-  connectionLimit: 5,
-  queueLimit: 0
+  connectionLimit: 3,
+  queueLimit: 20,
+
+  enableKeepAlive: true,
+  keepAliveInitialDelay: 0,
 });
 
 // Optional: test connection once
@@ -26,5 +28,5 @@ pool.getConnection((err, connection) => {
   }
 });
 
-// ✅ EXPORT PROMISE WRAPPER
+// ✅ SINGLE export
 module.exports = pool.promise();
