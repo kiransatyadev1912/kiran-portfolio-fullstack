@@ -47,6 +47,8 @@ app.options(/.*/, cors());
 // Body parsers
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+// ✅ Health check (used to wake Render from sleep)
+app.get("/health", (req, res) => res.status(200).send("OK"));
 
 // ✅ API: Save contact message to MySQL
 app.post("/api/contact", async (req, res) => {

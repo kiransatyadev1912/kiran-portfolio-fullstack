@@ -1,6 +1,19 @@
 console.log("✅ script.js loaded");
 
 const RENDER_BACKEND_URL = "https://kiran-portfolio-fullstack.onrender.com";
+// ✅ Wake Render backend (no server.js change needed)
+(function wakeBackend() {
+  const API_BASE =
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1"
+      ? "http://localhost:5000"
+      : RENDER_BACKEND_URL;
+
+  fetch(`${API_BASE}/api/profile`)
+    .then(() => console.log("✅ Backend awake"))
+    .catch(() => console.log("⚠️ Backend waking (cold start)"));
+})();
+
 
 /* ===============================
    Typing Animation (About Me)
